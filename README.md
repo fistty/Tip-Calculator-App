@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Solution](https://www.frontendmentor.io/solutions/pricing-component-with-custom-hover-states-WfPSSJkTWs)
+- Solution URL: [Frontend Solution](https://www.frontendmentor.io/solutions/tip-calculator-with-added-functionality-sLU1qSJy-g)
 - Live Site URL: [Netlify Live Site](https://fistty-tip-calculator.netlify.app/)
 
 ## My process
