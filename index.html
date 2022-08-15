@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="Calculator-Style.css" />
+    <script src="app.js" defer></script>
+    <title>Tip calculator app | Frontend Mentor</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src="./images/logo.svg" alt="logo" /></div>
+    </header>
+    <main>
+      <div class="input-section">
+        <div class="bill-input-div">
+          <label for="bill-input">Bill</label>
+          <div tabindex="0" class="input-container">
+            <div class="img-container">
+              <img src="./images/icon-dollar.svg" alt="icon-dollar" />
+            </div>
+            <input type="number" id="bill-input" placeholder="0" />
+          </div>
+        </div>
+        <div class="tip-input-div">
+          <label for="tip-input">Select Tip %</label>
+          <div class="tip-input-div-buttons">
+            <input class="tip-input-percent" type="button" value="5%" />
+            <input class="tip-input-percent" type="button" value="10%" />
+            <input class="tip-input-percent" type="button" value="15%" />
+            <input class="tip-input-percent" type="button" value="25%" />
+            <input class="tip-input-percent" type="button" value="50%" />
+            <input type="number" id="tip-input" placeholder="Custom" />
+          </div>
+        </div>
+        <div class="people-input-div">
+          <label for="people-input"
+            >Number of People
+            <span class="error-message">Can't be zero</span></label
+          >
+          <div tabindex="0" class="input-container">
+            <div class="img-container">
+              <img src="./images/icon-person.svg" alt="icon-person" />
+            </div>
+            <input type="number" id="people-input" placeholder="0" />
+          </div>
+        </div>
+      </div>
+      <div class="result-section">
+        <div class="tip-amount-result">
+          <p class="flex-span">
+            Tip Amount<span class="span-person">/ person</span>
+          </p>
+          <p class="calculated-amount tip-amount">$0.00</p>
+        </div>
+        <div class="total-amount-result">
+          <p class="flex-span">
+            Total<span class="span-person">/ person</span>
+          </p>
+          <p class="calculated-amount total-amount">$0.00</p>
+        </div>
+        <button disabled class="reset-button">RESET</button>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/fistty" target="_blank"
+        >Osuntuyi Ayomide Amos</a
+      >. View other solutions
+      <a href="https://www.frontendmentor.io/profile/fistty" target="_blank"
+        >here</a
+      >
+    </footer>
+  </body>
+</html>
+
+<!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
