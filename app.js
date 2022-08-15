@@ -80,7 +80,6 @@ const calc = () => {
     /* SEARCHES FOR "." AND 3 NUMBERS AFTER THEN SLICES IT FOR 2 DECIMAL PLACE */
     if (tipAmount.indexOf(".") > 1) {
       tipAmount = tipAmount.slice(0, tipAmount.indexOf(".") + 3);
-
       tipResult.innerText = `$${parseFloat(tipAmount).toFixed(2)}`;
     } else {
       tipResult.innerText = `$${parseFloat(tipAmount).toFixed(2)}`;
