@@ -28,7 +28,7 @@
   font-size: 1rem;
   text-align: center;
   line-height: 1.8;
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-weight: 700;
 }
 .attribution >  a {
@@ -340,4 +340,18 @@ label[for="people-input"] {
 .tip-input-div-buttons > .button-clicked {
   background-color: rgb(38, 194, 173);
   color: var(--Very-dark-cyan);
+}
+
+.scale-class {
+  animation: scale 2s ease-out;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(0);
+  }
 }
