@@ -64,8 +64,11 @@ input {
   font-family: var(--Space-Mono);
   font-size: var(--font-24px);
   font-weight: 700;
-
   text-align: right;
+}
+
+input::placeholder {
+  color: var(--Grayish-cyan);
 }
 
 /*============== BODY ==============*/
@@ -214,7 +217,8 @@ label[for="people-input"] {
   color: red;
   display: none;
 }
-.people-input-div > input::placeholder {
+
+input[id="people-input"]::placeholder {
   color: var(--Grayish-cyan);
 }
 
