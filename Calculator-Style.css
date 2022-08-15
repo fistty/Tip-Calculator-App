@@ -187,7 +187,7 @@ input[id="bill-input"]::placeholder {
 }
 
 .tip-input-div-buttons > input::placeholder {
-  color: var(--Dark-grayish-cyan);
+  color: var(--Very-dark-cyan);
 }
 
 button {
