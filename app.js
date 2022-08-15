@@ -18,6 +18,7 @@ billInput.addEventListener("input", () => {
 
 tipButton.forEach((tip) => {
   tip.addEventListener("click", () => {
+    // IF TIP CONTAINS ANOTHER CLASSLIST REMOVED THE ALREADY APPLIED STYLE
     if (tip.classList[1]) {
       tip.classList.remove("button-clicked");
       percent = "";
@@ -33,7 +34,6 @@ tipButton.forEach((tip) => {
     tipInput.style.color = "#a3a2a2";
     percent = parseInt(tip.value);
     calc();
-    console.log("percent isss: ", percent);
   });
 });
 
@@ -42,13 +42,12 @@ tipInput.addEventListener("input", () => {
   tipButton.forEach((item) => {
     item.classList.remove("button-clicked");
   });
-  // console.log(tipInput);
   percent = parseFloat(tipInput.value);
   calc();
-  // console.log(percent);
 });
 
 peopleInput.addEventListener("input", () => {
+  // RETURNS EARLY TO PREVENT BLOCK DISPLAY AFTER DELETING THE ZERO
   if (peopleInput.value === "") {
     errorMessage.style.display = "none";
     return;
@@ -56,16 +55,14 @@ peopleInput.addEventListener("input", () => {
   let arr = [];
   let newArr = [];
   arr.push(peopleInput.value);
-  console.log(arr.length);
+  // NESTED LOOP TO PARSEINT() INDIVIDUAL DIGITS IN arr
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
       parseInt(arr[i][j]);
       newArr.push(parseInt(arr[i][j]));
     }
   }
-  console.log(newArr);
   let addition = newArr.reduce((prev, curr) => prev + curr);
-  console.log(addition);
   if (addition === 0) {
     errorMessage.style.display = "block";
   } else {
@@ -81,8 +78,13 @@ const calc = () => {
     let tip = ((percent / 100) * bill) / noOfPeople;
     let tipAmount = tip.toString();
     /* SEARCHES FOR "." AND 3 NUMBERS AFTER THEN SLICES IT FOR 2 DECIMAL PLACE */
-    tipAmount = tipAmount.slice(0, tipAmount.indexOf(".") + 3);
-    tipResult.innerText = `$${parseFloat(tipAmount).toFixed(2)}`;
+    if (tipAmount.indexOf(".") > 1) {
+      tipAmount = tipAmount.slice(0, tipAmount.indexOf(".") + 3);
+
+      tipResult.innerText = `$${parseFloat(tipAmount).toFixed(2)}`;
+    } else {
+      tipResult.innerText = `$${parseFloat(tipAmount).toFixed(2)}`;
+    }
 
     /* FOR TOTAL */
     let tipAmountInInteger = ((percent / 100) * bill) / noOfPeople;
