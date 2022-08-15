@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Solution](https://www.frontendmentor.io/solutions/pricing-component-with-custom-hover-states-WfPSSJkTWs)
-- Live Site URL: [Netlify Live Site](https://fistty-pricing-component.netlify.app/)
+- Live Site URL: [Netlify Live Site](https://fistty-tip-calculator.netlify.app/)
 
 ## My process
 
